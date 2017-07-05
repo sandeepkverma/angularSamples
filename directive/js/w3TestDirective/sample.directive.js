@@ -28,7 +28,8 @@
          scope.weTest.name = 'naresh kumar verma'
 
          element.on('click',function(){
-           
+           alert('hi');
+           alert(attrs.name);
          });
 
   	  }
