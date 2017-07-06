@@ -22,13 +22,20 @@
 
             // alert(scope.sanListOptions);
             // alert(attrs.myHello);
+            scope.sl.valueKey = attrs.valueKey;
             element.on('click',function(event){
                 alert('click');
+                element.find('li').removeClass('san-selected-elem-active');
+                angular.element(event.target).addClass('san-selected-elem-active');
             });
 
             element.on('mouseover',function(event){
-                element.find('li').removeClass('active');
-                angular.element(event.target).addClass('active');
+                // element.find('li').removeClass('active');
+                angular.element(event.target).addClass('san-elem-active');
+            })  
+
+            element.on('mouseout',function(event){
+                angular.element(event.target).removeClass('san-elem-active');
             })
 
             scope.$watch('sanListOptions',function(value){
