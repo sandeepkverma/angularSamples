@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    </head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<body ng-app="myApp">
+<body ng-app="myApp" ng-controller="Ctrl">
 
-<w3-test-directive name="sandeep"></w3-test-directive>
-
-
+<!--<w3-test-directive name="sandeep"></w3-test-directive>-->
+<san-list-directive ng-model="selectedItem" san-list-options="anyList"></san-list-directive>
+{{selectedItem}}
 <script type="text/javascript" src="js/w3TestDirective/sample.directive.js"></script>
+<link rel="stylesheet" href="js/sanlistdirective/san-list.directive.css">
+
+<script type="text/javascript" src="js/sanlistdirective/san-list.directive.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/sample.controller.js"></script>
+
+
 </body>
 </html>

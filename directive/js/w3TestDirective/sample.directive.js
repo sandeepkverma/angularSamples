@@ -1,5 +1,29 @@
 
-  var app = angular.module("myApp", []);
+  var app = angular.module("myApp", ['sharedWidget']);
+
+  app.run(function($rootScope){
+    $rootScope.anyList  = [{
+                id:1,
+                name:'Sandeep Kumar'
+            },
+            {
+                id:2,
+                name:'Naresh Kumar'
+            },
+            {
+                id:3,
+                name:'Pawan Kumar'
+            },
+            {
+                id:4,
+                name:'Uday Singh'
+            },
+            {
+                id:5,
+                name:'Sunil Kumar'
+            }];
+
+  });
 
 ;(function(){
 	'use strict';
@@ -43,6 +67,7 @@
       var vm = this;
       vm.name = 'sandeep';
       vm.name1 = 'kumar';
+      
     }
   }
      
